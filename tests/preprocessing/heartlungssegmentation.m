@@ -30,8 +30,11 @@ slicenumber = 25;
 
 if(slicenumber > 0)
     %     Process a single slice
-    I0 = vol1(:,:,slicenumber);
-    
+    I0 = vol1win(:,:,slicenumber);
+    I1 = imfill(I0>0, 'holes');
+    I2 = imfill(I0 == 0, 'holes');
+    I3 = (~I2 & I1);
+    I4 = imfill(I3, 'holes');
 else
     %     Proceess whole volume
 end
