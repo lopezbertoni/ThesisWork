@@ -1,3 +1,4 @@
+% Function that returns the windowed data given the parameters. 
 function Vwin = GetWindowedData(V, range, win_width, win_center, rescale_int, rescale_slope)
 
 Vrs = (V*rescale_slope) + rescale_int;
