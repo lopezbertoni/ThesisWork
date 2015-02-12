@@ -2,7 +2,7 @@ clear all clc
 
 load sampledataslice;
 
-vol1slicers = vol1slice -1024;
+vol1slicers = vol1slice -1024; % Rescaleintercept 
 
 minH = min(vol1slicers(:));
 maxH = max(vol1slicers(:));
